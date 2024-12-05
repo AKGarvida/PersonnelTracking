@@ -322,7 +322,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(158, 600);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(274, 34);
+            this.dateTimePicker1.Size = new System.Drawing.Size(337, 34);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // lblAddress

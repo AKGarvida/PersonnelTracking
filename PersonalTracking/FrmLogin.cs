@@ -24,7 +24,18 @@ namespace PersonalTracking
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            string message = "Would you like to close window?";
+            string messagetitle = "Exit Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, messagetitle, buttons, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+
+            }
         }
     }
 }

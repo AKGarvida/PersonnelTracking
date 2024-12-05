@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonalTracking
 {
-    public partial class FrmEmployeeList : Form
+    public partial class FrmTaskList : Form
     {
-        public FrmEmployeeList()
+        public FrmTaskList()
         {
             InitializeComponent();
         }
@@ -36,6 +36,11 @@ namespace PersonalTracking
         private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = General.isNumber(e);
+        }
+
+        private void FrmTaskList_Load(object sender, EventArgs e)
+        {
+            pnlForAdmin.Hide();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonalTracking
 {
-    public partial class FrmEmployeeList : Form
+    public partial class FrmTask : Form
     {
-        public FrmEmployeeList()
+        public FrmTask()
         {
             InitializeComponent();
         }
@@ -31,11 +31,6 @@ namespace PersonalTracking
             {
 
             }
-        }
-
-        private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = General.isNumber(e);
         }
     }
 }
