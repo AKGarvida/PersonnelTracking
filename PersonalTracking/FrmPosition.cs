@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonalTracking
 {
-    public partial class FrmMain : Form
+    public partial class FrmPosition : Form
     {
-        public FrmMain()
+        public FrmPosition()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace PersonalTracking
         private void pctExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

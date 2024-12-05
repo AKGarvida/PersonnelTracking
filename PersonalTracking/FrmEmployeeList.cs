@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonalTracking
 {
-    public partial class FrmMain : Form
+    public partial class FrmEmployeeList : Form
     {
-        public FrmMain()
+        public FrmEmployeeList()
         {
             InitializeComponent();
         }
@@ -20,6 +20,11 @@ namespace PersonalTracking
         private void pctExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = General.isNumber(e);
         }
     }
 }
