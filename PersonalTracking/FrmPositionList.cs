@@ -65,7 +65,7 @@ namespace PersonalTracking
             dgvPositionList.Columns[1].Visible = false;
             dgvPositionList.Columns[3].Visible = false;
             dgvPositionList.Columns[0].HeaderText = "Department Name";
-            dgvPositionList.Columns[2].HeaderText = "position Name";
+            dgvPositionList.Columns[2].HeaderText = "Position Name";
 
         }
     }
