@@ -39,7 +39,10 @@
             this.lblEnd = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDayAmount = new System.Windows.Forms.TextBox();
+            this.lblExplanation = new System.Windows.Forms.Label();
+            this.txtExplanation = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.pnlPermission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.SuspendLayout();
@@ -53,14 +56,14 @@
             this.pnlPermission.Location = new System.Drawing.Point(0, 0);
             this.pnlPermission.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlPermission.Name = "pnlPermission";
-            this.pnlPermission.Size = new System.Drawing.Size(1132, 93);
+            this.pnlPermission.Size = new System.Drawing.Size(797, 93);
             this.pnlPermission.TabIndex = 6;
             // 
             // pctExit
             // 
             this.pctExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctExit.BackgroundImage")));
             this.pctExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctExit.Location = new System.Drawing.Point(1056, 0);
+            this.pctExit.Location = new System.Drawing.Point(721, -1);
             this.pctExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pctExit.Name = "pctExit";
             this.pctExit.Size = new System.Drawing.Size(76, 67);
@@ -86,7 +89,7 @@
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.ReadOnly = true;
             this.txtUserNo.Size = new System.Drawing.Size(342, 34);
-            this.txtUserNo.TabIndex = 15;
+            this.txtUserNo.TabIndex = 0;
             // 
             // lblUserNoTL
             // 
@@ -104,7 +107,7 @@
             this.dpEnd.Location = new System.Drawing.Point(159, 217);
             this.dpEnd.Name = "dpEnd";
             this.dpEnd.Size = new System.Drawing.Size(342, 34);
-            this.dpEnd.TabIndex = 18;
+            this.dpEnd.TabIndex = 2;
             // 
             // dpStart
             // 
@@ -112,7 +115,7 @@
             this.dpStart.Location = new System.Drawing.Point(159, 166);
             this.dpStart.Name = "dpStart";
             this.dpStart.Size = new System.Drawing.Size(342, 34);
-            this.dpStart.TabIndex = 17;
+            this.dpStart.TabIndex = 1;
             // 
             // lblEnd
             // 
@@ -144,25 +147,58 @@
             this.lblAmount.TabIndex = 16;
             this.lblAmount.Text = "Day Amount";
             // 
-            // textBox1
+            // txtDayAmount
             // 
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(159, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(342, 34);
-            this.textBox1.TabIndex = 15;
+            this.txtDayAmount.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDayAmount.Location = new System.Drawing.Point(159, 271);
+            this.txtDayAmount.Name = "txtDayAmount";
+            this.txtDayAmount.ReadOnly = true;
+            this.txtDayAmount.Size = new System.Drawing.Size(342, 34);
+            this.txtDayAmount.TabIndex = 3;
+            // 
+            // lblExplanation
+            // 
+            this.lblExplanation.AutoSize = true;
+            this.lblExplanation.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblExplanation.Location = new System.Drawing.Point(13, 337);
+            this.lblExplanation.Name = "lblExplanation";
+            this.lblExplanation.Size = new System.Drawing.Size(120, 27);
+            this.lblExplanation.TabIndex = 16;
+            this.lblExplanation.Text = "Explanation";
+            // 
+            // txtExplanation
+            // 
+            this.txtExplanation.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtExplanation.Location = new System.Drawing.Point(159, 334);
+            this.txtExplanation.Multiline = true;
+            this.txtExplanation.Name = "txtExplanation";
+            this.txtExplanation.Size = new System.Drawing.Size(599, 308);
+            this.txtExplanation.TabIndex = 4;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.Red;
+            this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Location = new System.Drawing.Point(634, 666);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(124, 47);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // FrmPermission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 687);
+            this.ClientSize = new System.Drawing.Size(797, 734);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dpEnd);
             this.Controls.Add(this.dpStart);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblStart);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtExplanation);
+            this.Controls.Add(this.lblExplanation);
+            this.Controls.Add(this.txtDayAmount);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.txtUserNo);
             this.Controls.Add(this.lblUserNoTL);
@@ -191,6 +227,9 @@
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDayAmount;
+        private System.Windows.Forms.Label lblExplanation;
+        private System.Windows.Forms.TextBox txtExplanation;
+        private System.Windows.Forms.Button btnSave;
     }
 }

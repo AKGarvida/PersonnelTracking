@@ -33,8 +33,8 @@
             this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblTask = new System.Windows.Forms.Label();
             this.pnl1 = new System.Windows.Forms.Panel();
-            this.pnl2 = new System.Windows.Forms.Panel();
             this.dgvTask = new System.Windows.Forms.DataGridView();
+            this.pnl2 = new System.Windows.Forms.Panel();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.lblPositionEL = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -49,14 +49,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblContent = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnlTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnl1.SuspendLayout();
-            this.pnl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).BeginInit();
+            this.pnl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTask
@@ -104,6 +104,17 @@
             this.pnl1.Size = new System.Drawing.Size(461, 675);
             this.pnl1.TabIndex = 6;
             // 
+            // dgvTask
+            // 
+            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTask.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTask.Location = new System.Drawing.Point(0, 215);
+            this.dgvTask.Name = "dgvTask";
+            this.dgvTask.RowHeadersWidth = 51;
+            this.dgvTask.RowTemplate.Height = 24;
+            this.dgvTask.Size = new System.Drawing.Size(461, 460);
+            this.dgvTask.TabIndex = 1;
+            // 
             // pnl2
             // 
             this.pnl2.Controls.Add(this.cmbPosition);
@@ -115,17 +126,6 @@
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(461, 215);
             this.pnl2.TabIndex = 0;
-            // 
-            // dgvTask
-            // 
-            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTask.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTask.Location = new System.Drawing.Point(0, 215);
-            this.dgvTask.Name = "dgvTask";
-            this.dgvTask.RowHeadersWidth = 51;
-            this.dgvTask.RowTemplate.Height = 24;
-            this.dgvTask.Size = new System.Drawing.Size(461, 460);
-            this.dgvTask.TabIndex = 1;
             // 
             // cmbPosition
             // 
@@ -259,15 +259,15 @@
             this.textBox1.Size = new System.Drawing.Size(342, 34);
             this.textBox1.TabIndex = 4;
             // 
-            // label2
+            // lblContent
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(25, 403);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 27);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Title";
+            this.lblContent.AutoSize = true;
+            this.lblContent.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblContent.Location = new System.Drawing.Point(25, 403);
+            this.lblContent.Name = "lblContent";
+            this.lblContent.Size = new System.Drawing.Size(85, 27);
+            this.lblContent.TabIndex = 12;
+            this.lblContent.Text = "Content";
             // 
             // textBox2
             // 
@@ -298,7 +298,7 @@
             this.Controls.Add(this.cmbTaskState);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblContent);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.txtSurname);
@@ -316,9 +316,9 @@
             this.pnlTask.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
             this.pnl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();
             this.pnl2.ResumeLayout(false);
             this.pnl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +346,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtTitle;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblContent;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnSave;
     }
