@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL.DTO;
 
 namespace PersonalTracking
 {
@@ -31,6 +33,40 @@ namespace PersonalTracking
             {
 
             }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmPosition frm = new FrmPosition();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+            FillGrid();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmPosition frm = new FrmPosition();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        List<PositionDTO> positionList = new List<PositionDTO>();
+        void FillGrid()
+        {
+            positionList = PositionBLL.GetPositions();
+            dgvPositionList.DataSource = positionList;
+        }
+
+        private void FrmPositionList_Load(object sender, EventArgs e)
+        {
+            FillGrid();
+            dgvPositionList.Columns[1].Visible = false;
+            dgvPositionList.Columns[3].Visible = false;
+            dgvPositionList.Columns[0].HeaderText = "Department Name";
+            dgvPositionList.Columns[2].HeaderText = "position Name";
+
         }
     }
 }

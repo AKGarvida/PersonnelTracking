@@ -32,7 +32,7 @@
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnlLoginUser = new System.Windows.Forms.Panel();
             this.lblLoginUser = new System.Windows.Forms.Label();
@@ -76,16 +76,17 @@
             this.txtPassword.Size = new System.Drawing.Size(251, 34);
             this.txtPassword.TabIndex = 1;
             // 
-            // btnEnter
+            // btnLogin
             // 
-            this.btnEnter.BackColor = System.Drawing.Color.Red;
-            this.btnEnter.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEnter.Location = new System.Drawing.Point(101, 256);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(124, 47);
-            this.btnEnter.TabIndex = 2;
-            this.btnEnter.Text = "Enter";
-            this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Location = new System.Drawing.Point(101, 256);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(124, 47);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
@@ -125,7 +126,7 @@
             this.ClientSize = new System.Drawing.Size(517, 336);
             this.Controls.Add(this.pnlLoginUser);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnEnter);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUserNo);
@@ -147,7 +148,7 @@
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnlLoginUser;
         private System.Windows.Forms.Label lblLoginUser;

@@ -33,6 +33,14 @@
             this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.pnlEmployeeList = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.lblPositionEL = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblDepartmentEL = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
@@ -41,15 +49,7 @@
             this.pnlEmployeeList2 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblDepartmentEL = new System.Windows.Forms.Label();
-            this.lblPositionEL = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.pnlPositionList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnlEmployeeList.SuspendLayout();
@@ -112,6 +112,84 @@
             this.pnlEmployeeList.Size = new System.Drawing.Size(970, 174);
             this.pnlEmployeeList.TabIndex = 4;
             // 
+            // cmbPosition
+            // 
+            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(586, 63);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(274, 35);
+            this.cmbPosition.TabIndex = 4;
+            // 
+            // lblPositionEL
+            // 
+            this.lblPositionEL.AutoSize = true;
+            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPositionEL.Location = new System.Drawing.Point(442, 71);
+            this.lblPositionEL.Name = "lblPositionEL";
+            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
+            this.lblPositionEL.TabIndex = 7;
+            this.lblPositionEL.Text = "Position";
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(763, 113);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(156, 53);
+            this.btnClear.TabIndex = 6;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Red;
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(586, 113);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(156, 53);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(586, 10);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(274, 35);
+            this.cmbDepartment.TabIndex = 3;
+            // 
+            // lblDepartmentEL
+            // 
+            this.lblDepartmentEL.AutoSize = true;
+            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDepartmentEL.Location = new System.Drawing.Point(442, 18);
+            this.lblDepartmentEL.Name = "lblDepartmentEL";
+            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
+            this.lblDepartmentEL.TabIndex = 7;
+            this.lblDepartmentEL.Text = "Department";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSurname.Location = new System.Drawing.Point(148, 123);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(251, 34);
+            this.txtSurname.TabIndex = 2;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSurname.Location = new System.Drawing.Point(25, 126);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(94, 27);
+            this.lblSurname.TabIndex = 2;
+            this.lblSurname.Text = "Surname";
+            // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
@@ -164,7 +242,7 @@
             // 
             this.pnlEmployeeList2.Controls.Add(this.btnDelete);
             this.pnlEmployeeList2.Controls.Add(this.btnUpdate);
-            this.pnlEmployeeList2.Controls.Add(this.btnAdd);
+            this.pnlEmployeeList2.Controls.Add(this.btnNew);
             this.pnlEmployeeList2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlEmployeeList2.Location = new System.Drawing.Point(0, 583);
             this.pnlEmployeeList2.Name = "pnlEmployeeList2";
@@ -192,95 +270,19 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAdd
+            // btnNew
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(246, 18);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 67);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSurname.Location = new System.Drawing.Point(25, 126);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(94, 27);
-            this.lblSurname.TabIndex = 2;
-            this.lblSurname.Text = "Surname";
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSurname.Location = new System.Drawing.Point(148, 123);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(251, 34);
-            this.txtSurname.TabIndex = 2;
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(586, 10);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(274, 35);
-            this.cmbDepartment.TabIndex = 3;
-            // 
-            // lblDepartmentEL
-            // 
-            this.lblDepartmentEL.AutoSize = true;
-            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDepartmentEL.Location = new System.Drawing.Point(442, 18);
-            this.lblDepartmentEL.Name = "lblDepartmentEL";
-            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
-            this.lblDepartmentEL.TabIndex = 7;
-            this.lblDepartmentEL.Text = "Department";
-            // 
-            // lblPositionEL
-            // 
-            this.lblPositionEL.AutoSize = true;
-            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPositionEL.Location = new System.Drawing.Point(442, 71);
-            this.lblPositionEL.Name = "lblPositionEL";
-            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
-            this.lblPositionEL.TabIndex = 7;
-            this.lblPositionEL.Text = "Position";
-            // 
-            // cmbPosition
-            // 
-            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(586, 63);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(274, 35);
-            this.cmbPosition.TabIndex = 4;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Red;
-            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(586, 113);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 53);
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(763, 113);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(156, 53);
-            this.btnClear.TabIndex = 6;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.Red;
+            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(246, 18);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(139, 67);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // FrmEmployeeList
             // 
@@ -316,7 +318,7 @@
         private System.Windows.Forms.Panel pnlEmployeeList2;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;

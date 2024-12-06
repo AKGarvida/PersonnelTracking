@@ -383,6 +383,7 @@
             this.Controls.Add(this.pnlEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmployee";
             this.pnlEmployee.ResumeLayout(false);
             this.pnlEmployee.PerformLayout();

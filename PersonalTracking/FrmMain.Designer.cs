@@ -37,10 +37,8 @@
             this.btnPosition = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.pnlEmployeeTracking = new System.Windows.Forms.Panel();
-            this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblEmployeeTracking = new System.Windows.Forms.Label();
             this.pnlEmployeeTracking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEmployee
@@ -55,6 +53,7 @@
             this.btnEmployee.Text = "Employee";
             this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnTasks
             // 
@@ -68,6 +67,7 @@
             this.btnTasks.Text = "Tasks";
             this.btnTasks.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTasks.UseVisualStyleBackColor = false;
+            this.btnTasks.Click += new System.EventHandler(this.btnTasks_Click);
             // 
             // btnSalary
             // 
@@ -81,6 +81,7 @@
             this.btnSalary.Text = "Salary";
             this.btnSalary.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalary.UseVisualStyleBackColor = false;
+            this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
             // 
             // btnPermission
             // 
@@ -94,6 +95,7 @@
             this.btnPermission.Text = "Permission";
             this.btnPermission.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPermission.UseVisualStyleBackColor = false;
+            this.btnPermission.Click += new System.EventHandler(this.btnPermission_Click);
             // 
             // btnDepartment
             // 
@@ -107,6 +109,7 @@
             this.btnDepartment.Text = "Department";
             this.btnDepartment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDepartment.UseVisualStyleBackColor = false;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnPosition
             // 
@@ -120,6 +123,7 @@
             this.btnPosition.Text = "Position";
             this.btnPosition.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPosition.UseVisualStyleBackColor = false;
+            this.btnPosition.Click += new System.EventHandler(this.btnPosition_Click);
             // 
             // btnLogOut
             // 
@@ -133,27 +137,16 @@
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // pnlEmployeeTracking
             // 
             this.pnlEmployeeTracking.BackColor = System.Drawing.Color.Red;
-            this.pnlEmployeeTracking.Controls.Add(this.pctExit);
             this.pnlEmployeeTracking.Controls.Add(this.lblEmployeeTracking);
             this.pnlEmployeeTracking.Location = new System.Drawing.Point(0, 0);
             this.pnlEmployeeTracking.Name = "pnlEmployeeTracking";
             this.pnlEmployeeTracking.Size = new System.Drawing.Size(504, 99);
             this.pnlEmployeeTracking.TabIndex = 0;
-            // 
-            // pctExit
-            // 
-            this.pctExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctExit.BackgroundImage")));
-            this.pctExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctExit.Location = new System.Drawing.Point(445, 3);
-            this.pctExit.Name = "pctExit";
-            this.pctExit.Size = new System.Drawing.Size(56, 50);
-            this.pctExit.TabIndex = 1;
-            this.pctExit.TabStop = false;
-            this.pctExit.Click += new System.EventHandler(this.pctExit_Click);
             // 
             // lblEmployeeTracking
             // 
@@ -186,7 +179,6 @@
             this.Text = "Employee Tracking";
             this.pnlEmployeeTracking.ResumeLayout(false);
             this.pnlEmployeeTracking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,6 +194,5 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel pnlEmployeeTracking;
         private System.Windows.Forms.Label lblEmployeeTracking;
-        private System.Windows.Forms.PictureBox pctExit;
     }
 }

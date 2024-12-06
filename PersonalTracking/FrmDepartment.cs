@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace PersonalTracking
 {
@@ -30,6 +32,20 @@ namespace PersonalTracking
             else
             {
 
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtDepartment.Text.Trim() == "")
+                MessageBox.Show("PLease fill the name field");
+            else
+            {
+                DEPARTMENT department = new DEPARTMENT();
+                department.DepartmentName = txtDepartment.Text;
+                BLL.DepartmentBLL.AddDepartment(department);
+                MessageBox.Show("Department was added succesfully");
+                txtDepartment.Clear();
             }
         }
     }

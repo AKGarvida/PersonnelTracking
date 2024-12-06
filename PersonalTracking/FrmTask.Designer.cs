@@ -311,6 +311,7 @@
             this.Controls.Add(this.pnlTask);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTask";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTask";
             this.pnlTask.ResumeLayout(false);
             this.pnlTask.PerformLayout();

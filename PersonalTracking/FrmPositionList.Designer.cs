@@ -36,7 +36,7 @@
             this.pnlPositionListButtons = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.pnlPositionList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPositionList)).BeginInit();
@@ -80,20 +80,21 @@
             // 
             // dgvPositionList
             // 
+            this.dgvPositionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPositionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPositionList.Location = new System.Drawing.Point(0, 103);
             this.dgvPositionList.Name = "dgvPositionList";
             this.dgvPositionList.RowHeadersWidth = 51;
             this.dgvPositionList.RowTemplate.Height = 24;
-            this.dgvPositionList.Size = new System.Drawing.Size(809, 424);
+            this.dgvPositionList.Size = new System.Drawing.Size(809, 558);
             this.dgvPositionList.TabIndex = 3;
             // 
             // pnlPositionListButtons
             // 
             this.pnlPositionListButtons.Controls.Add(this.btnDelete);
             this.pnlPositionListButtons.Controls.Add(this.btnUpdate);
-            this.pnlPositionListButtons.Controls.Add(this.btnAdd);
+            this.pnlPositionListButtons.Controls.Add(this.btnNew);
             this.pnlPositionListButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlPositionListButtons.Location = new System.Drawing.Point(0, 549);
             this.pnlPositionListButtons.Name = "pnlPositionListButtons";
@@ -121,17 +122,19 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAdd
+            // btnNew
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(165, 23);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 67);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.Red;
+            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(165, 23);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(139, 67);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // FrmPositionList
             // 
@@ -145,6 +148,7 @@
             this.Name = "FrmPositionList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPositionList";
+            this.Load += new System.EventHandler(this.FrmPositionList_Load);
             this.pnlPositionList.ResumeLayout(false);
             this.pnlPositionList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
@@ -163,6 +167,6 @@
         private System.Windows.Forms.Panel pnlPositionListButtons;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
     }
 }

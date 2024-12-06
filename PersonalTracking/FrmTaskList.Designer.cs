@@ -33,44 +33,44 @@
             this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblTaskList = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnApprove = new System.Windows.Forms.Button();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbTaskState = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
+            this.rbStartDate = new System.Windows.Forms.RadioButton();
+            this.dpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dpStart = new System.Windows.Forms.DateTimePicker();
+            this.lblFinish = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.lblTaskDate = new System.Windows.Forms.Label();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.lblPositionEL = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblDepartmentEL = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.lblUserNoTL = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.lblPositionEL = new System.Windows.Forms.Label();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblDepartmentEL = new System.Windows.Forms.Label();
-            this.lblTaskDate = new System.Windows.Forms.Label();
-            this.lblStart = new System.Windows.Forms.Label();
-            this.lblFinish = new System.Windows.Forms.Label();
-            this.dpStart = new System.Windows.Forms.DateTimePicker();
-            this.dpEnd = new System.Windows.Forms.DateTimePicker();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbStartDate = new System.Windows.Forms.RadioButton();
-            this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbTaskState = new System.Windows.Forms.ComboBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnApprove = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlTaskLists.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.panel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnlForAdmin.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.pnlForAdmin.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTaskLists
@@ -118,72 +118,144 @@
             this.panel.Size = new System.Drawing.Size(1171, 304);
             this.panel.TabIndex = 5;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnApprove);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 772);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1171, 94);
-            this.panel1.TabIndex = 6;
+            this.panel2.Controls.Add(this.btnClear);
+            this.panel2.Controls.Add(this.btnSearch);
+            this.panel2.Controls.Add(this.cmbTaskState);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Controls.Add(this.dpEnd);
+            this.panel2.Controls.Add(this.dpStart);
+            this.panel2.Controls.Add(this.lblFinish);
+            this.panel2.Controls.Add(this.lblStart);
+            this.panel2.Controls.Add(this.lblTaskDate);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(445, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(726, 304);
+            this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // btnClear
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 397);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1171, 375);
-            this.dataGridView1.TabIndex = 7;
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(558, 237);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(156, 53);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // btnDelete
+            // btnSearch
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(763, 15);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(139, 67);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.Red;
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(381, 237);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(156, 53);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // btnUpdate
+            // cmbTaskState
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Red;
-            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(593, 15);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(139, 67);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.cmbTaskState.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTaskState.FormattingEnabled = true;
+            this.cmbTaskState.Location = new System.Drawing.Point(146, 185);
+            this.cmbTaskState.Name = "cmbTaskState";
+            this.cmbTaskState.Size = new System.Drawing.Size(342, 35);
+            this.cmbTaskState.TabIndex = 2;
             // 
-            // btnAdd
+            // label1
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(423, 15);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 67);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(22, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 27);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Task State";
             // 
-            // btnApprove
+            // groupBox1
             // 
-            this.btnApprove.BackColor = System.Drawing.Color.Red;
-            this.btnApprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.Location = new System.Drawing.Point(246, 15);
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(143, 67);
-            this.btnApprove.TabIndex = 0;
-            this.btnApprove.Text = "Approve";
-            this.btnApprove.UseVisualStyleBackColor = false;
+            this.groupBox1.Controls.Add(this.rbDeliveryDate);
+            this.groupBox1.Controls.Add(this.rbStartDate);
+            this.groupBox1.Location = new System.Drawing.Point(519, 59);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(181, 116);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbDeliveryDate
+            // 
+            this.rbDeliveryDate.AutoSize = true;
+            this.rbDeliveryDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDeliveryDate.Location = new System.Drawing.Point(6, 74);
+            this.rbDeliveryDate.Name = "rbDeliveryDate";
+            this.rbDeliveryDate.Size = new System.Drawing.Size(161, 31);
+            this.rbDeliveryDate.TabIndex = 1;
+            this.rbDeliveryDate.TabStop = true;
+            this.rbDeliveryDate.Text = "Delivery Date";
+            this.rbDeliveryDate.UseVisualStyleBackColor = true;
+            // 
+            // rbStartDate
+            // 
+            this.rbStartDate.AutoSize = true;
+            this.rbStartDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbStartDate.Location = new System.Drawing.Point(6, 24);
+            this.rbStartDate.Name = "rbStartDate";
+            this.rbStartDate.Size = new System.Drawing.Size(126, 31);
+            this.rbStartDate.TabIndex = 0;
+            this.rbStartDate.TabStop = true;
+            this.rbStartDate.Text = "Start Date";
+            this.rbStartDate.UseVisualStyleBackColor = true;
+            // 
+            // dpEnd
+            // 
+            this.dpEnd.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpEnd.Location = new System.Drawing.Point(146, 130);
+            this.dpEnd.Name = "dpEnd";
+            this.dpEnd.Size = new System.Drawing.Size(342, 34);
+            this.dpEnd.TabIndex = 1;
+            // 
+            // dpStart
+            // 
+            this.dpStart.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStart.Location = new System.Drawing.Point(146, 80);
+            this.dpStart.Name = "dpStart";
+            this.dpStart.Size = new System.Drawing.Size(342, 34);
+            this.dpStart.TabIndex = 0;
+            // 
+            // lblFinish
+            // 
+            this.lblFinish.AutoSize = true;
+            this.lblFinish.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblFinish.Location = new System.Drawing.Point(22, 137);
+            this.lblFinish.Name = "lblFinish";
+            this.lblFinish.Size = new System.Drawing.Size(68, 27);
+            this.lblFinish.TabIndex = 8;
+            this.lblFinish.Text = "Finish";
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStart.Location = new System.Drawing.Point(22, 86);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(56, 27);
+            this.lblStart.TabIndex = 8;
+            this.lblStart.Text = "Start";
+            // 
+            // lblTaskDate
+            // 
+            this.lblTaskDate.AutoSize = true;
+            this.lblTaskDate.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaskDate.Location = new System.Drawing.Point(20, 14);
+            this.lblTaskDate.Name = "lblTaskDate";
+            this.lblTaskDate.Size = new System.Drawing.Size(154, 41);
+            this.lblTaskDate.TabIndex = 8;
+            this.lblTaskDate.Text = "Task Date";
             // 
             // pnlForAdmin
             // 
@@ -203,23 +275,43 @@
             this.pnlForAdmin.Size = new System.Drawing.Size(445, 304);
             this.pnlForAdmin.TabIndex = 0;
             // 
-            // panel2
+            // cmbPosition
             // 
-            this.panel2.Controls.Add(this.btnClear);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.cmbTaskState);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.dpEnd);
-            this.panel2.Controls.Add(this.dpStart);
-            this.panel2.Controls.Add(this.lblFinish);
-            this.panel2.Controls.Add(this.lblStart);
-            this.panel2.Controls.Add(this.lblTaskDate);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(445, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(726, 304);
-            this.panel2.TabIndex = 1;
+            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(162, 247);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
+            this.cmbPosition.TabIndex = 4;
+            // 
+            // lblPositionEL
+            // 
+            this.lblPositionEL.AutoSize = true;
+            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPositionEL.Location = new System.Drawing.Point(18, 255);
+            this.lblPositionEL.Name = "lblPositionEL";
+            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
+            this.lblPositionEL.TabIndex = 11;
+            this.lblPositionEL.Text = "Position";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(162, 190);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
+            this.cmbDepartment.TabIndex = 3;
+            // 
+            // lblDepartmentEL
+            // 
+            this.lblDepartmentEL.AutoSize = true;
+            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDepartmentEL.Location = new System.Drawing.Point(18, 198);
+            this.lblDepartmentEL.Name = "lblDepartmentEL";
+            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
+            this.lblDepartmentEL.TabIndex = 12;
+            this.lblDepartmentEL.Text = "Department";
             // 
             // txtSurname
             // 
@@ -276,164 +368,74 @@
             this.lblUserNoTL.TabIndex = 8;
             this.lblUserNoTL.Text = "UserNo";
             // 
-            // cmbPosition
+            // panel1
             // 
-            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(162, 247);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
-            this.cmbPosition.TabIndex = 4;
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnApprove);
+            this.panel1.Controls.Add(this.btnNew);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 772);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1171, 94);
+            this.panel1.TabIndex = 6;
             // 
-            // lblPositionEL
+            // btnDelete
             // 
-            this.lblPositionEL.AutoSize = true;
-            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPositionEL.Location = new System.Drawing.Point(18, 255);
-            this.lblPositionEL.Name = "lblPositionEL";
-            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
-            this.lblPositionEL.TabIndex = 11;
-            this.lblPositionEL.Text = "Position";
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(763, 15);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(139, 67);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // cmbDepartment
+            // btnUpdate
             // 
-            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(162, 190);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
-            this.cmbDepartment.TabIndex = 3;
+            this.btnUpdate.BackColor = System.Drawing.Color.Red;
+            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(593, 15);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(139, 67);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // lblDepartmentEL
+            // btnApprove
             // 
-            this.lblDepartmentEL.AutoSize = true;
-            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDepartmentEL.Location = new System.Drawing.Point(18, 198);
-            this.lblDepartmentEL.Name = "lblDepartmentEL";
-            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
-            this.lblDepartmentEL.TabIndex = 12;
-            this.lblDepartmentEL.Text = "Department";
+            this.btnApprove.BackColor = System.Drawing.Color.Red;
+            this.btnApprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApprove.Location = new System.Drawing.Point(246, 15);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(143, 67);
+            this.btnApprove.TabIndex = 0;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseVisualStyleBackColor = false;
             // 
-            // lblTaskDate
+            // btnNew
             // 
-            this.lblTaskDate.AutoSize = true;
-            this.lblTaskDate.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaskDate.Location = new System.Drawing.Point(20, 14);
-            this.lblTaskDate.Name = "lblTaskDate";
-            this.lblTaskDate.Size = new System.Drawing.Size(154, 41);
-            this.lblTaskDate.TabIndex = 8;
-            this.lblTaskDate.Text = "Task Date";
+            this.btnNew.BackColor = System.Drawing.Color.Red;
+            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(423, 15);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(139, 67);
+            this.btnNew.TabIndex = 1;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // lblStart
+            // dataGridView1
             // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblStart.Location = new System.Drawing.Point(22, 86);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(56, 27);
-            this.lblStart.TabIndex = 8;
-            this.lblStart.Text = "Start";
-            // 
-            // lblFinish
-            // 
-            this.lblFinish.AutoSize = true;
-            this.lblFinish.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblFinish.Location = new System.Drawing.Point(22, 137);
-            this.lblFinish.Name = "lblFinish";
-            this.lblFinish.Size = new System.Drawing.Size(68, 27);
-            this.lblFinish.TabIndex = 8;
-            this.lblFinish.Text = "Finish";
-            // 
-            // dpStart
-            // 
-            this.dpStart.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpStart.Location = new System.Drawing.Point(146, 80);
-            this.dpStart.Name = "dpStart";
-            this.dpStart.Size = new System.Drawing.Size(342, 34);
-            this.dpStart.TabIndex = 0;
-            // 
-            // dpEnd
-            // 
-            this.dpEnd.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpEnd.Location = new System.Drawing.Point(146, 130);
-            this.dpEnd.Name = "dpEnd";
-            this.dpEnd.Size = new System.Drawing.Size(342, 34);
-            this.dpEnd.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbDeliveryDate);
-            this.groupBox1.Controls.Add(this.rbStartDate);
-            this.groupBox1.Location = new System.Drawing.Point(519, 59);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(181, 116);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbStartDate
-            // 
-            this.rbStartDate.AutoSize = true;
-            this.rbStartDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStartDate.Location = new System.Drawing.Point(6, 24);
-            this.rbStartDate.Name = "rbStartDate";
-            this.rbStartDate.Size = new System.Drawing.Size(126, 31);
-            this.rbStartDate.TabIndex = 0;
-            this.rbStartDate.TabStop = true;
-            this.rbStartDate.Text = "Start Date";
-            this.rbStartDate.UseVisualStyleBackColor = true;
-            // 
-            // rbDeliveryDate
-            // 
-            this.rbDeliveryDate.AutoSize = true;
-            this.rbDeliveryDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDeliveryDate.Location = new System.Drawing.Point(6, 74);
-            this.rbDeliveryDate.Name = "rbDeliveryDate";
-            this.rbDeliveryDate.Size = new System.Drawing.Size(161, 31);
-            this.rbDeliveryDate.TabIndex = 1;
-            this.rbDeliveryDate.TabStop = true;
-            this.rbDeliveryDate.Text = "Delivery Date";
-            this.rbDeliveryDate.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(22, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 27);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Task State";
-            // 
-            // cmbTaskState
-            // 
-            this.cmbTaskState.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTaskState.FormattingEnabled = true;
-            this.cmbTaskState.Location = new System.Drawing.Point(146, 185);
-            this.cmbTaskState.Name = "cmbTaskState";
-            this.cmbTaskState.Size = new System.Drawing.Size(342, 35);
-            this.cmbTaskState.TabIndex = 2;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(558, 237);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(156, 53);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Red;
-            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(381, 237);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 53);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 397);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1171, 375);
+            this.dataGridView1.TabIndex = 7;
             // 
             // FrmTaskList
             // 
@@ -453,14 +455,14 @@
             this.pnlTaskLists.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
             this.panel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnlForAdmin.ResumeLayout(false);
-            this.pnlForAdmin.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.pnlForAdmin.ResumeLayout(false);
+            this.pnlForAdmin.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -475,7 +477,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.Panel panel2;

@@ -34,24 +34,8 @@
             this.lblTask = new System.Windows.Forms.Label();
             this.pnlPermissionList = new System.Windows.Forms.Panel();
             this.pnlPlUsers = new System.Windows.Forms.Panel();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.lblPositionEL = new System.Windows.Forms.Label();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblDepartmentEL = new System.Windows.Forms.Label();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtDayAmount = new System.Windows.Forms.TextBox();
-            this.lblDayAmount = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnApprove = new System.Windows.Forms.Button();
-            this.btnDisapprove = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvPermissionList = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
             this.rbStartDate = new System.Windows.Forms.RadioButton();
@@ -60,18 +44,34 @@
             this.lblFinish = new System.Windows.Forms.Label();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblPermissionList = new System.Windows.Forms.Label();
-            this.lblUserNo = new System.Windows.Forms.Label();
+            this.txtDayAmount = new System.Windows.Forms.TextBox();
+            this.lblDayAmount = new System.Windows.Forms.Label();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.lblPositionEL = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblDepartmentEL = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblUserNo = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnApprove = new System.Windows.Forms.Button();
+            this.btnDisapprove = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.dgvPermissionList = new System.Windows.Forms.DataGridView();
             this.pnlPermission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnlPermissionList.SuspendLayout();
             this.pnlPlUsers.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.pnlForAdmin.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermissionList)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPermission
@@ -137,195 +137,27 @@
             this.pnlPlUsers.Size = new System.Drawing.Size(763, 302);
             this.pnlPlUsers.TabIndex = 1;
             // 
-            // pnlForAdmin
+            // btnClear
             // 
-            this.pnlForAdmin.Controls.Add(this.cmbPosition);
-            this.pnlForAdmin.Controls.Add(this.lblPositionEL);
-            this.pnlForAdmin.Controls.Add(this.cmbDepartment);
-            this.pnlForAdmin.Controls.Add(this.lblDepartmentEL);
-            this.pnlForAdmin.Controls.Add(this.txtSurname);
-            this.pnlForAdmin.Controls.Add(this.lblSurname);
-            this.pnlForAdmin.Controls.Add(this.txtUserNo);
-            this.pnlForAdmin.Controls.Add(this.lblUserNo);
-            this.pnlForAdmin.Controls.Add(this.txtName);
-            this.pnlForAdmin.Controls.Add(this.lblName);
-            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlForAdmin.Location = new System.Drawing.Point(0, 0);
-            this.pnlForAdmin.Name = "pnlForAdmin";
-            this.pnlForAdmin.Size = new System.Drawing.Size(643, 302);
-            this.pnlForAdmin.TabIndex = 0;
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(569, 234);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(156, 53);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // cmbPosition
+            // btnSearch
             // 
-            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(169, 244);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
-            this.cmbPosition.TabIndex = 4;
-            // 
-            // lblPositionEL
-            // 
-            this.lblPositionEL.AutoSize = true;
-            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPositionEL.Location = new System.Drawing.Point(25, 252);
-            this.lblPositionEL.Name = "lblPositionEL";
-            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
-            this.lblPositionEL.TabIndex = 21;
-            this.lblPositionEL.Text = "Position";
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(169, 187);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
-            this.cmbDepartment.TabIndex = 3;
-            // 
-            // lblDepartmentEL
-            // 
-            this.lblDepartmentEL.AutoSize = true;
-            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDepartmentEL.Location = new System.Drawing.Point(25, 195);
-            this.lblDepartmentEL.Name = "lblDepartmentEL";
-            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
-            this.lblDepartmentEL.TabIndex = 22;
-            this.lblDepartmentEL.Text = "Department";
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSurname.Location = new System.Drawing.Point(169, 131);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(251, 34);
-            this.txtSurname.TabIndex = 2;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSurname.Location = new System.Drawing.Point(25, 134);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(94, 27);
-            this.lblSurname.TabIndex = 18;
-            this.lblSurname.Text = "Surname";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.txtName.Location = new System.Drawing.Point(169, 76);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(251, 34);
-            this.txtName.TabIndex = 1;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblName.Location = new System.Drawing.Point(25, 83);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(67, 27);
-            this.lblName.TabIndex = 19;
-            this.lblName.Text = "Name";
-            // 
-            // txtDayAmount
-            // 
-            this.txtDayAmount.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.txtDayAmount.Location = new System.Drawing.Point(171, 180);
-            this.txtDayAmount.Name = "txtDayAmount";
-            this.txtDayAmount.Size = new System.Drawing.Size(251, 34);
-            this.txtDayAmount.TabIndex = 2;
-            this.txtDayAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDayAmount_KeyPress);
-            // 
-            // lblDayAmount
-            // 
-            this.lblDayAmount.AutoSize = true;
-            this.lblDayAmount.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDayAmount.Location = new System.Drawing.Point(26, 187);
-            this.lblDayAmount.Name = "lblDayAmount";
-            this.lblDayAmount.Size = new System.Drawing.Size(130, 27);
-            this.lblDayAmount.TabIndex = 20;
-            this.lblDayAmount.Text = "Day Amount";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnApprove);
-            this.panel2.Controls.Add(this.btnDisapprove);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 721);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1406, 100);
-            this.panel2.TabIndex = 9;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(984, 21);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(139, 67);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Red;
-            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(814, 21);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(139, 67);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnApprove
-            // 
-            this.btnApprove.BackColor = System.Drawing.Color.Red;
-            this.btnApprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.Location = new System.Drawing.Point(270, 21);
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(139, 67);
-            this.btnApprove.TabIndex = 0;
-            this.btnApprove.Text = "Approve";
-            this.btnApprove.UseVisualStyleBackColor = false;
-            // 
-            // btnDisapprove
-            // 
-            this.btnDisapprove.BackColor = System.Drawing.Color.Red;
-            this.btnDisapprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisapprove.Location = new System.Drawing.Point(437, 21);
-            this.btnDisapprove.Name = "btnDisapprove";
-            this.btnDisapprove.Size = new System.Drawing.Size(174, 67);
-            this.btnDisapprove.TabIndex = 1;
-            this.btnDisapprove.Text = "Disapprove";
-            this.btnDisapprove.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(644, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 67);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // dgvPermissionList
-            // 
-            this.dgvPermissionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPermissionList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPermissionList.Location = new System.Drawing.Point(0, 395);
-            this.dgvPermissionList.Name = "dgvPermissionList";
-            this.dgvPermissionList.RowHeadersWidth = 51;
-            this.dgvPermissionList.RowTemplate.Height = 24;
-            this.dgvPermissionList.Size = new System.Drawing.Size(1406, 326);
-            this.dgvPermissionList.TabIndex = 10;
+            this.btnSearch.BackColor = System.Drawing.Color.Red;
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(392, 234);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(156, 53);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -407,15 +239,98 @@
             this.lblPermissionList.TabIndex = 15;
             this.lblPermissionList.Text = "Permission List";
             // 
-            // lblUserNo
+            // txtDayAmount
             // 
-            this.lblUserNo.AutoSize = true;
-            this.lblUserNo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblUserNo.Location = new System.Drawing.Point(24, 31);
-            this.lblUserNo.Name = "lblUserNo";
-            this.lblUserNo.Size = new System.Drawing.Size(83, 27);
-            this.lblUserNo.TabIndex = 20;
-            this.lblUserNo.Text = "UserNo";
+            this.txtDayAmount.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtDayAmount.Location = new System.Drawing.Point(171, 180);
+            this.txtDayAmount.Name = "txtDayAmount";
+            this.txtDayAmount.Size = new System.Drawing.Size(251, 34);
+            this.txtDayAmount.TabIndex = 2;
+            this.txtDayAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDayAmount_KeyPress);
+            // 
+            // lblDayAmount
+            // 
+            this.lblDayAmount.AutoSize = true;
+            this.lblDayAmount.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDayAmount.Location = new System.Drawing.Point(26, 187);
+            this.lblDayAmount.Name = "lblDayAmount";
+            this.lblDayAmount.Size = new System.Drawing.Size(130, 27);
+            this.lblDayAmount.TabIndex = 20;
+            this.lblDayAmount.Text = "Day Amount";
+            // 
+            // pnlForAdmin
+            // 
+            this.pnlForAdmin.Controls.Add(this.cmbPosition);
+            this.pnlForAdmin.Controls.Add(this.lblPositionEL);
+            this.pnlForAdmin.Controls.Add(this.cmbDepartment);
+            this.pnlForAdmin.Controls.Add(this.lblDepartmentEL);
+            this.pnlForAdmin.Controls.Add(this.txtSurname);
+            this.pnlForAdmin.Controls.Add(this.lblSurname);
+            this.pnlForAdmin.Controls.Add(this.txtUserNo);
+            this.pnlForAdmin.Controls.Add(this.lblUserNo);
+            this.pnlForAdmin.Controls.Add(this.txtName);
+            this.pnlForAdmin.Controls.Add(this.lblName);
+            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlForAdmin.Location = new System.Drawing.Point(0, 0);
+            this.pnlForAdmin.Name = "pnlForAdmin";
+            this.pnlForAdmin.Size = new System.Drawing.Size(643, 302);
+            this.pnlForAdmin.TabIndex = 0;
+            // 
+            // cmbPosition
+            // 
+            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(169, 244);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
+            this.cmbPosition.TabIndex = 4;
+            // 
+            // lblPositionEL
+            // 
+            this.lblPositionEL.AutoSize = true;
+            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPositionEL.Location = new System.Drawing.Point(25, 252);
+            this.lblPositionEL.Name = "lblPositionEL";
+            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
+            this.lblPositionEL.TabIndex = 21;
+            this.lblPositionEL.Text = "Position";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(169, 187);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
+            this.cmbDepartment.TabIndex = 3;
+            // 
+            // lblDepartmentEL
+            // 
+            this.lblDepartmentEL.AutoSize = true;
+            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDepartmentEL.Location = new System.Drawing.Point(25, 195);
+            this.lblDepartmentEL.Name = "lblDepartmentEL";
+            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
+            this.lblDepartmentEL.TabIndex = 22;
+            this.lblDepartmentEL.Text = "Department";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSurname.Location = new System.Drawing.Point(169, 131);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(251, 34);
+            this.txtSurname.TabIndex = 2;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSurname.Location = new System.Drawing.Point(25, 134);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(94, 27);
+            this.lblSurname.TabIndex = 18;
+            this.lblSurname.Text = "Surname";
             // 
             // txtUserNo
             // 
@@ -426,27 +341,114 @@
             this.txtUserNo.TabIndex = 0;
             this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
             // 
-            // btnClear
+            // lblUserNo
             // 
-            this.btnClear.BackColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(569, 234);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(156, 53);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.lblUserNo.AutoSize = true;
+            this.lblUserNo.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUserNo.Location = new System.Drawing.Point(24, 31);
+            this.lblUserNo.Name = "lblUserNo";
+            this.lblUserNo.Size = new System.Drawing.Size(83, 27);
+            this.lblUserNo.TabIndex = 20;
+            this.lblUserNo.Text = "UserNo";
             // 
-            // btnSearch
+            // txtName
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Red;
-            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(392, 234);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 53);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.txtName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(169, 76);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(251, 34);
+            this.txtName.TabIndex = 1;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblName.Location = new System.Drawing.Point(25, 83);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(67, 27);
+            this.lblName.TabIndex = 19;
+            this.lblName.Text = "Name";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnApprove);
+            this.panel2.Controls.Add(this.btnDisapprove);
+            this.panel2.Controls.Add(this.btnNew);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 721);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1406, 100);
+            this.panel2.TabIndex = 9;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(984, 21);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(139, 67);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Red;
+            this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(814, 21);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(139, 67);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnApprove
+            // 
+            this.btnApprove.BackColor = System.Drawing.Color.Red;
+            this.btnApprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApprove.Location = new System.Drawing.Point(270, 21);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(139, 67);
+            this.btnApprove.TabIndex = 0;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseVisualStyleBackColor = false;
+            // 
+            // btnDisapprove
+            // 
+            this.btnDisapprove.BackColor = System.Drawing.Color.Red;
+            this.btnDisapprove.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisapprove.Location = new System.Drawing.Point(437, 21);
+            this.btnDisapprove.Name = "btnDisapprove";
+            this.btnDisapprove.Size = new System.Drawing.Size(174, 67);
+            this.btnDisapprove.TabIndex = 1;
+            this.btnDisapprove.Text = "Disapprove";
+            this.btnDisapprove.UseVisualStyleBackColor = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.Red;
+            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(644, 21);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(139, 67);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // dgvPermissionList
+            // 
+            this.dgvPermissionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPermissionList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPermissionList.Location = new System.Drawing.Point(0, 395);
+            this.dgvPermissionList.Name = "dgvPermissionList";
+            this.dgvPermissionList.RowHeadersWidth = 51;
+            this.dgvPermissionList.RowTemplate.Height = 24;
+            this.dgvPermissionList.Size = new System.Drawing.Size(1406, 326);
+            this.dgvPermissionList.TabIndex = 10;
             // 
             // FrmPermissionList
             // 
@@ -467,12 +469,12 @@
             this.pnlPermissionList.ResumeLayout(false);
             this.pnlPlUsers.ResumeLayout(false);
             this.pnlPlUsers.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermissionList)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -489,7 +491,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnDisapprove;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel pnlPlUsers;
         private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.ComboBox cmbPosition;

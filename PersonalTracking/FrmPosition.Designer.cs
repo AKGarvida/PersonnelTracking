@@ -33,7 +33,6 @@
             this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblDepartment2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -86,17 +85,6 @@
             this.lblDepartment2.TabIndex = 5;
             this.lblDepartment2.Text = "Position";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(93, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 27);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Department";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // cmbDepartment
             // 
             this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +112,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmPosition
             // 
@@ -133,13 +122,13 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.cmbDepartment);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDepartment2);
             this.Controls.Add(this.pnlPosition);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPosition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPosition";
+            this.Load += new System.EventHandler(this.FrmPosition_Load);
             this.pnlPosition.ResumeLayout(false);
             this.pnlPosition.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
@@ -154,7 +143,6 @@
         private System.Windows.Forms.PictureBox pctExit;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblDepartment2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Button btnSave;

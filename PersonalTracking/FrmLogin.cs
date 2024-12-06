@@ -37,5 +37,23 @@ namespace PersonalTracking
 
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmMain frm = new FrmMain();
+            this.Hide();
+            frm.ShowDialog();
+            //this.Visible = true;
+
+            if (this.Visible == true)
+            {
+                frm.Close();
+            }
+            else
+            {
+                Application.Exit();
+            }
+            
+        }
     }
 }

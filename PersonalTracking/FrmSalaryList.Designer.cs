@@ -34,6 +34,12 @@
             this.lblSalaryList = new System.Windows.Forms.Label();
             this.pnlForCriteria = new System.Windows.Forms.Panel();
             this.pnlForUsers = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbEqual = new System.Windows.Forms.RadioButton();
+            this.rbLess = new System.Windows.Forms.RadioButton();
+            this.rbMore = new System.Windows.Forms.RadioButton();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.lblYear = new System.Windows.Forms.Label();
@@ -54,22 +60,16 @@
             this.pnlDockDown = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.dgvSalaryList = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbMore = new System.Windows.Forms.RadioButton();
-            this.rbLess = new System.Windows.Forms.RadioButton();
-            this.rbEqual = new System.Windows.Forms.RadioButton();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.pnlSalaryList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnlForCriteria.SuspendLayout();
             this.pnlForUsers.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.pnlForAdmin.SuspendLayout();
             this.pnlDockDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSalaryList
@@ -81,14 +81,14 @@
             this.pnlSalaryList.Location = new System.Drawing.Point(0, 0);
             this.pnlSalaryList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlSalaryList.Name = "pnlSalaryList";
-            this.pnlSalaryList.Size = new System.Drawing.Size(1151, 88);
+            this.pnlSalaryList.Size = new System.Drawing.Size(980, 88);
             this.pnlSalaryList.TabIndex = 9;
             // 
             // pctExit
             // 
             this.pctExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctExit.BackgroundImage")));
             this.pctExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctExit.Location = new System.Drawing.Point(1075, -1);
+            this.pctExit.Location = new System.Drawing.Point(904, 0);
             this.pctExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pctExit.Name = "pctExit";
             this.pctExit.Size = new System.Drawing.Size(76, 67);
@@ -114,7 +114,7 @@
             this.pnlForCriteria.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlForCriteria.Location = new System.Drawing.Point(0, 88);
             this.pnlForCriteria.Name = "pnlForCriteria";
-            this.pnlForCriteria.Size = new System.Drawing.Size(1151, 298);
+            this.pnlForCriteria.Size = new System.Drawing.Size(980, 298);
             this.pnlForCriteria.TabIndex = 10;
             // 
             // pnlForUsers
@@ -131,8 +131,77 @@
             this.pnlForUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForUsers.Location = new System.Drawing.Point(461, 0);
             this.pnlForUsers.Name = "pnlForUsers";
-            this.pnlForUsers.Size = new System.Drawing.Size(690, 298);
+            this.pnlForUsers.Size = new System.Drawing.Size(519, 298);
             this.pnlForUsers.TabIndex = 1;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(325, 232);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(156, 53);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Red;
+            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(325, 169);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(156, 53);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbEqual);
+            this.groupBox1.Controls.Add(this.rbLess);
+            this.groupBox1.Controls.Add(this.rbMore);
+            this.groupBox1.Location = new System.Drawing.Point(139, 160);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(110, 135);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            // 
+            // rbEqual
+            // 
+            this.rbEqual.AutoSize = true;
+            this.rbEqual.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEqual.Location = new System.Drawing.Point(6, 89);
+            this.rbEqual.Name = "rbEqual";
+            this.rbEqual.Size = new System.Drawing.Size(85, 31);
+            this.rbEqual.TabIndex = 2;
+            this.rbEqual.TabStop = true;
+            this.rbEqual.Text = "Equal";
+            this.rbEqual.UseVisualStyleBackColor = true;
+            // 
+            // rbLess
+            // 
+            this.rbLess.AutoSize = true;
+            this.rbLess.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLess.Location = new System.Drawing.Point(6, 52);
+            this.rbLess.Name = "rbLess";
+            this.rbLess.Size = new System.Drawing.Size(73, 31);
+            this.rbLess.TabIndex = 1;
+            this.rbLess.TabStop = true;
+            this.rbLess.Text = "Less";
+            this.rbLess.UseVisualStyleBackColor = true;
+            // 
+            // rbMore
+            // 
+            this.rbMore.AutoSize = true;
+            this.rbMore.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMore.Location = new System.Drawing.Point(6, 15);
+            this.rbMore.Name = "rbMore";
+            this.rbMore.Size = new System.Drawing.Size(82, 31);
+            this.rbMore.TabIndex = 0;
+            this.rbMore.TabStop = true;
+            this.rbMore.Text = "More";
+            this.rbMore.UseVisualStyleBackColor = true;
             // 
             // cmbMonth
             // 
@@ -141,7 +210,7 @@
             this.cmbMonth.Location = new System.Drawing.Point(139, 68);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(342, 35);
-            this.cmbMonth.TabIndex = 25;
+            this.cmbMonth.TabIndex = 1;
             // 
             // txtYear
             // 
@@ -149,7 +218,7 @@
             this.txtYear.Location = new System.Drawing.Point(139, 18);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(342, 34);
-            this.txtYear.TabIndex = 24;
+            this.txtYear.TabIndex = 0;
             // 
             // lblYear
             // 
@@ -177,7 +246,7 @@
             this.txtSalary.Location = new System.Drawing.Point(139, 120);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(342, 34);
-            this.txtSalary.TabIndex = 23;
+            this.txtSalary.TabIndex = 2;
             // 
             // lblSalaryy
             // 
@@ -214,7 +283,7 @@
             this.cmbPosition.Location = new System.Drawing.Point(172, 237);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(251, 35);
-            this.cmbPosition.TabIndex = 17;
+            this.cmbPosition.TabIndex = 4;
             // 
             // lblPositionEL
             // 
@@ -233,7 +302,7 @@
             this.cmbDepartment.Location = new System.Drawing.Point(172, 180);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
-            this.cmbDepartment.TabIndex = 16;
+            this.cmbDepartment.TabIndex = 3;
             // 
             // lblDepartmentEL
             // 
@@ -251,7 +320,7 @@
             this.txtSurname.Location = new System.Drawing.Point(172, 124);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(251, 34);
-            this.txtSurname.TabIndex = 15;
+            this.txtSurname.TabIndex = 2;
             // 
             // lblSurname
             // 
@@ -269,7 +338,7 @@
             this.txtName.Location = new System.Drawing.Point(172, 69);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(251, 34);
-            this.txtName.TabIndex = 14;
+            this.txtName.TabIndex = 1;
             // 
             // lblName
             // 
@@ -287,7 +356,7 @@
             this.txtUserNo.Location = new System.Drawing.Point(172, 12);
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(251, 34);
-            this.txtUserNo.TabIndex = 13;
+            this.txtUserNo.TabIndex = 0;
             // 
             // lblUserNoTL
             // 
@@ -303,21 +372,21 @@
             // 
             this.pnlDockDown.Controls.Add(this.btnDelete);
             this.pnlDockDown.Controls.Add(this.btnUpdate);
-            this.pnlDockDown.Controls.Add(this.btnAdd);
+            this.pnlDockDown.Controls.Add(this.btnNew);
             this.pnlDockDown.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlDockDown.Location = new System.Drawing.Point(0, 752);
             this.pnlDockDown.Name = "pnlDockDown";
-            this.pnlDockDown.Size = new System.Drawing.Size(1151, 93);
+            this.pnlDockDown.Size = new System.Drawing.Size(980, 93);
             this.pnlDockDown.TabIndex = 11;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(662, 14);
+            this.btnDelete.Location = new System.Drawing.Point(586, 14);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(139, 67);
-            this.btnDelete.TabIndex = 6;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -325,23 +394,25 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Red;
             this.btnUpdate.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(492, 14);
+            this.btnUpdate.Location = new System.Drawing.Point(416, 14);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(139, 67);
-            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnAdd
+            // btnNew
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(322, 14);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(139, 67);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.Red;
+            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(246, 14);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(139, 67);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // dgvSalaryList
             // 
@@ -351,83 +422,14 @@
             this.dgvSalaryList.Name = "dgvSalaryList";
             this.dgvSalaryList.RowHeadersWidth = 51;
             this.dgvSalaryList.RowTemplate.Height = 24;
-            this.dgvSalaryList.Size = new System.Drawing.Size(1151, 366);
+            this.dgvSalaryList.Size = new System.Drawing.Size(980, 366);
             this.dgvSalaryList.TabIndex = 12;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbEqual);
-            this.groupBox1.Controls.Add(this.rbLess);
-            this.groupBox1.Controls.Add(this.rbMore);
-            this.groupBox1.Location = new System.Drawing.Point(139, 160);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(110, 135);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbMore
-            // 
-            this.rbMore.AutoSize = true;
-            this.rbMore.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMore.Location = new System.Drawing.Point(6, 15);
-            this.rbMore.Name = "rbMore";
-            this.rbMore.Size = new System.Drawing.Size(82, 31);
-            this.rbMore.TabIndex = 0;
-            this.rbMore.TabStop = true;
-            this.rbMore.Text = "More";
-            this.rbMore.UseVisualStyleBackColor = true;
-            // 
-            // rbLess
-            // 
-            this.rbLess.AutoSize = true;
-            this.rbLess.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLess.Location = new System.Drawing.Point(6, 52);
-            this.rbLess.Name = "rbLess";
-            this.rbLess.Size = new System.Drawing.Size(73, 31);
-            this.rbLess.TabIndex = 0;
-            this.rbLess.TabStop = true;
-            this.rbLess.Text = "Less";
-            this.rbLess.UseVisualStyleBackColor = true;
-            // 
-            // rbEqual
-            // 
-            this.rbEqual.AutoSize = true;
-            this.rbEqual.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEqual.Location = new System.Drawing.Point(6, 89);
-            this.rbEqual.Name = "rbEqual";
-            this.rbEqual.Size = new System.Drawing.Size(85, 31);
-            this.rbEqual.TabIndex = 0;
-            this.rbEqual.TabStop = true;
-            this.rbEqual.Text = "Equal";
-            this.rbEqual.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(489, 175);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(156, 53);
-            this.btnClear.TabIndex = 31;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Red;
-            this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(312, 175);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 53);
-            this.btnSearch.TabIndex = 30;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // FrmSalaryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 845);
+            this.ClientSize = new System.Drawing.Size(980, 845);
             this.Controls.Add(this.dgvSalaryList);
             this.Controls.Add(this.pnlDockDown);
             this.Controls.Add(this.pnlForCriteria);
@@ -442,12 +444,12 @@
             this.pnlForCriteria.ResumeLayout(false);
             this.pnlForUsers.ResumeLayout(false);
             this.pnlForUsers.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
             this.pnlDockDown.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaryList)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -462,7 +464,7 @@
         private System.Windows.Forms.DataGridView dgvSalaryList;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel pnlForUsers;
         private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.ComboBox cmbPosition;
