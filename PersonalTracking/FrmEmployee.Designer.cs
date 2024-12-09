@@ -49,7 +49,7 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblSalary = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.lblPositionE = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -57,7 +57,7 @@
             this.lblBirthday = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnlEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
@@ -153,6 +153,7 @@
             this.btnCheck.TabIndex = 6;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // txtUserNo
             // 
@@ -229,9 +230,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(694, 213);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(350, 236);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -245,6 +248,7 @@
             this.btnBrowse.TabIndex = 4;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // openFileDialog1
             // 
@@ -260,14 +264,14 @@
             this.lblSalary.TabIndex = 7;
             this.lblSalary.Text = "Salary";
             // 
-            // textBox1
+            // txtSalary
             // 
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(158, 415);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 34);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtSalary.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSalary.Location = new System.Drawing.Point(158, 415);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(274, 34);
+            this.txtSalary.TabIndex = 5;
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // cmbPosition
             // 
@@ -296,6 +300,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(274, 35);
             this.cmbDepartment.TabIndex = 6;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblDepartmentE
             // 
@@ -335,14 +340,14 @@
             this.lblAddress.TabIndex = 7;
             this.lblAddress.Text = "Address";
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(158, 668);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(867, 137);
-            this.textBox2.TabIndex = 9;
+            this.txtAddress.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtAddress.Location = new System.Drawing.Point(158, 668);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(867, 137);
+            this.txtAddress.TabIndex = 9;
             // 
             // btnSave
             // 
@@ -354,6 +359,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmEmployee
             // 
@@ -374,9 +380,9 @@
             this.Controls.Add(this.lbImagePath);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblSurname);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.lblSalary);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
@@ -385,6 +391,7 @@
             this.Name = "FrmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmployee";
+            this.Load += new System.EventHandler(this.FrmEmployee_Load);
             this.pnlEmployee.ResumeLayout(false);
             this.pnlEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
@@ -418,7 +425,7 @@
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.Label lblPositionE;
         private System.Windows.Forms.ComboBox cmbDepartment;
@@ -426,7 +433,7 @@
         private System.Windows.Forms.Label lblBirthday;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnSave;
     }
 }
