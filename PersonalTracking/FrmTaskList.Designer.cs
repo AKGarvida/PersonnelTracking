@@ -62,7 +62,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTaskList = new System.Windows.Forms.DataGridView();
             this.pnlTaskLists.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.panel.SuspendLayout();
@@ -70,7 +70,7 @@
             this.groupBox1.SuspendLayout();
             this.pnlForAdmin.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTaskLists
@@ -146,6 +146,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -157,6 +158,7 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbTaskState
             // 
@@ -302,6 +304,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
             this.cmbDepartment.TabIndex = 3;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblDepartmentEL
             // 
@@ -426,23 +429,24 @@
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // dataGridView1
+            // dgvTaskList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 397);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1171, 375);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvTaskList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaskList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTaskList.Location = new System.Drawing.Point(0, 397);
+            this.dgvTaskList.Name = "dgvTaskList";
+            this.dgvTaskList.RowHeadersWidth = 51;
+            this.dgvTaskList.RowTemplate.Height = 24;
+            this.dgvTaskList.Size = new System.Drawing.Size(1171, 375);
+            this.dgvTaskList.TabIndex = 7;
             // 
             // FrmTaskList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 866);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTaskList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.pnlTaskLists);
@@ -462,7 +466,7 @@
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,7 +478,7 @@
         private System.Windows.Forms.Label lblTaskList;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTaskList;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnNew;

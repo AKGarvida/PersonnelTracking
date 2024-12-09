@@ -46,11 +46,11 @@
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.lblUserNoTL = new System.Windows.Forms.Label();
             this.cmbTaskState = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTaskState = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTitlee = new System.Windows.Forms.TextBox();
             this.lblContent = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContent = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.pnlTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
@@ -106,6 +106,7 @@
             // 
             // dgvTask
             // 
+            this.dgvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTask.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTask.Location = new System.Drawing.Point(0, 215);
@@ -114,6 +115,7 @@
             this.dgvTask.RowTemplate.Height = 24;
             this.dgvTask.Size = new System.Drawing.Size(461, 460);
             this.dgvTask.TabIndex = 1;
+            this.dgvTask.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTask_RowEnter);
             // 
             // pnl2
             // 
@@ -135,6 +137,7 @@
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(251, 35);
             this.cmbPosition.TabIndex = 1;
+            this.cmbPosition.SelectedIndexChanged += new System.EventHandler(this.cmbPosition_SelectedIndexChanged);
             // 
             // lblPositionEL
             // 
@@ -154,6 +157,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
             this.cmbDepartment.TabIndex = 0;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblDepartmentEL
             // 
@@ -231,15 +235,15 @@
             this.cmbTaskState.Size = new System.Drawing.Size(342, 35);
             this.cmbTaskState.TabIndex = 3;
             // 
-            // label1
+            // lblTaskState
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(25, 293);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 27);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Task State";
+            this.lblTaskState.AutoSize = true;
+            this.lblTaskState.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTaskState.Location = new System.Drawing.Point(25, 293);
+            this.lblTaskState.Name = "lblTaskState";
+            this.lblTaskState.Size = new System.Drawing.Size(106, 27);
+            this.lblTaskState.TabIndex = 16;
+            this.lblTaskState.Text = "Task State";
             // 
             // txtTitle
             // 
@@ -251,13 +255,13 @@
             this.txtTitle.TabIndex = 12;
             this.txtTitle.Text = "Title";
             // 
-            // textBox1
+            // txtTitlee
             // 
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(169, 342);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(342, 34);
-            this.textBox1.TabIndex = 4;
+            this.txtTitlee.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTitlee.Location = new System.Drawing.Point(169, 342);
+            this.txtTitlee.Name = "txtTitlee";
+            this.txtTitlee.Size = new System.Drawing.Size(342, 34);
+            this.txtTitlee.TabIndex = 4;
             // 
             // lblContent
             // 
@@ -269,14 +273,14 @@
             this.lblContent.TabIndex = 12;
             this.lblContent.Text = "Content";
             // 
-            // textBox2
+            // txtContent
             // 
-            this.textBox2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(169, 400);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(502, 281);
-            this.textBox2.TabIndex = 11;
+            this.txtContent.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.txtContent.Location = new System.Drawing.Point(169, 400);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(502, 281);
+            this.txtContent.TabIndex = 11;
             // 
             // btnSave
             // 
@@ -288,6 +292,7 @@
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmTask
             // 
@@ -296,10 +301,10 @@
             this.ClientSize = new System.Drawing.Size(1153, 768);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbTaskState);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblTaskState);
+            this.Controls.Add(this.txtContent);
             this.Controls.Add(this.lblContent);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTitlee);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.lblSurname);
@@ -313,6 +318,7 @@
             this.Name = "FrmTask";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTask";
+            this.Load += new System.EventHandler(this.FrmTask_Load);
             this.pnlTask.ResumeLayout(false);
             this.pnlTask.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
@@ -344,11 +350,11 @@
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label lblUserNoTL;
         private System.Windows.Forms.ComboBox cmbTaskState;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTaskState;
         private System.Windows.Forms.Label txtTitle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitlee;
         private System.Windows.Forms.Label lblContent;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContent;
         private System.Windows.Forms.Button btnSave;
     }
 }

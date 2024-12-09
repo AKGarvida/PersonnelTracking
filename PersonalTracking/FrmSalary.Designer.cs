@@ -33,18 +33,18 @@
             this.pctExit = new System.Windows.Forms.PictureBox();
             this.lblSalary = new System.Windows.Forms.Label();
             this.pnlSalaryRight = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvSalary = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.lblDepartmentEL = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.lblPositionEL = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.lblUserNoTL = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.lblPositionEL = new System.Windows.Forms.Label();
-            this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.lblDepartmentEL = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.lblSalaryy = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             this.pnlSalary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnlSalaryRight.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSalary
@@ -104,6 +104,19 @@
             this.pnlSalaryRight.Size = new System.Drawing.Size(437, 615);
             this.pnlSalaryRight.TabIndex = 9;
             // 
+            // dgvSalary
+            // 
+            this.dgvSalary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSalary.Location = new System.Drawing.Point(0, 145);
+            this.dgvSalary.Name = "dgvSalary";
+            this.dgvSalary.RowHeadersWidth = 51;
+            this.dgvSalary.RowTemplate.Height = 24;
+            this.dgvSalary.Size = new System.Drawing.Size(437, 470);
+            this.dgvSalary.TabIndex = 1;
+            this.dgvSalary.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalary_RowEnter);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cmbPosition);
@@ -116,16 +129,43 @@
             this.panel1.Size = new System.Drawing.Size(437, 145);
             this.panel1.TabIndex = 0;
             // 
-            // dgvSalary
+            // cmbPosition
             // 
-            this.dgvSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSalary.Location = new System.Drawing.Point(0, 145);
-            this.dgvSalary.Name = "dgvSalary";
-            this.dgvSalary.RowHeadersWidth = 51;
-            this.dgvSalary.RowTemplate.Height = 24;
-            this.dgvSalary.Size = new System.Drawing.Size(437, 470);
-            this.dgvSalary.TabIndex = 1;
+            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(165, 75);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
+            this.cmbPosition.TabIndex = 1;
+            // 
+            // lblDepartmentEL
+            // 
+            this.lblDepartmentEL.AutoSize = true;
+            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDepartmentEL.Location = new System.Drawing.Point(21, 26);
+            this.lblDepartmentEL.Name = "lblDepartmentEL";
+            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
+            this.lblDepartmentEL.TabIndex = 20;
+            this.lblDepartmentEL.Text = "Department";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(165, 18);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
+            this.cmbDepartment.TabIndex = 0;
+            // 
+            // lblPositionEL
+            // 
+            this.lblPositionEL.AutoSize = true;
+            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPositionEL.Location = new System.Drawing.Point(21, 83);
+            this.lblPositionEL.Name = "lblPositionEL";
+            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
+            this.lblPositionEL.TabIndex = 19;
+            this.lblPositionEL.Text = "Position";
             // 
             // txtSurname
             // 
@@ -183,44 +223,6 @@
             this.lblUserNoTL.Size = new System.Drawing.Size(83, 27);
             this.lblUserNoTL.TabIndex = 20;
             this.lblUserNoTL.Text = "UserNo";
-            // 
-            // cmbPosition
-            // 
-            this.cmbPosition.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(165, 75);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(251, 35);
-            this.cmbPosition.TabIndex = 1;
-            // 
-            // lblPositionEL
-            // 
-            this.lblPositionEL.AutoSize = true;
-            this.lblPositionEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPositionEL.Location = new System.Drawing.Point(21, 83);
-            this.lblPositionEL.Name = "lblPositionEL";
-            this.lblPositionEL.Size = new System.Drawing.Size(86, 27);
-            this.lblPositionEL.TabIndex = 19;
-            this.lblPositionEL.Text = "Position";
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(165, 18);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(251, 35);
-            this.cmbDepartment.TabIndex = 0;
-            // 
-            // lblDepartmentEL
-            // 
-            this.lblDepartmentEL.AutoSize = true;
-            this.lblDepartmentEL.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDepartmentEL.Location = new System.Drawing.Point(21, 26);
-            this.lblDepartmentEL.Name = "lblDepartmentEL";
-            this.lblDepartmentEL.Size = new System.Drawing.Size(123, 27);
-            this.lblDepartmentEL.TabIndex = 20;
-            this.lblDepartmentEL.Text = "Department";
             // 
             // txtSalary
             // 
@@ -287,6 +289,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmSalary
             // 
@@ -312,13 +315,14 @@
             this.Name = "FrmSalary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSalary";
+            this.Load += new System.EventHandler(this.FrmSalary_Load);
             this.pnlSalary.ResumeLayout(false);
             this.pnlSalary.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
             this.pnlSalaryRight.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSalary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

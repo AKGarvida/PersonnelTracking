@@ -141,6 +141,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -152,6 +153,7 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbDepartment
             // 
@@ -161,6 +163,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(274, 35);
             this.cmbDepartment.TabIndex = 3;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // lblDepartmentEL
             // 
@@ -229,6 +232,7 @@
             // 
             // dgvEmployeeList
             // 
+            this.dgvEmployeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployeeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmployeeList.Location = new System.Drawing.Point(0, 267);
@@ -297,6 +301,7 @@
             this.Name = "FrmEmployeeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmployeeList";
+            this.Load += new System.EventHandler(this.FrmEmployeeList_Load);
             this.pnlPositionList.ResumeLayout(false);
             this.pnlPositionList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();

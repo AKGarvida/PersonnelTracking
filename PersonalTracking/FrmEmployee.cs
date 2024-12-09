@@ -144,7 +144,6 @@ namespace PersonalTracking
                 combofull = true;
                 dateTimePicker1.Value = DateTime.Today;
             }
-
         }
 
         bool isUnique = false;
