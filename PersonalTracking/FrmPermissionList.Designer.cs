@@ -37,7 +37,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
+            this.rbEndDate = new System.Windows.Forms.RadioButton();
             this.rbStartDate = new System.Windows.Forms.RadioButton();
             this.dpEnd = new System.Windows.Forms.DateTimePicker();
             this.dpStart = new System.Windows.Forms.DateTimePicker();
@@ -64,6 +64,8 @@
             this.btnDisapprove = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.dgvPermissionList = new System.Windows.Forms.DataGridView();
+            this.lblState = new System.Windows.Forms.Label();
+            this.cmbState = new System.Windows.Forms.ComboBox();
             this.pnlPermission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).BeginInit();
             this.pnlPermissionList.SuspendLayout();
@@ -123,6 +125,8 @@
             // 
             this.pnlPlUsers.Controls.Add(this.btnClear);
             this.pnlPlUsers.Controls.Add(this.btnSearch);
+            this.pnlPlUsers.Controls.Add(this.cmbState);
+            this.pnlPlUsers.Controls.Add(this.lblState);
             this.pnlPlUsers.Controls.Add(this.groupBox1);
             this.pnlPlUsers.Controls.Add(this.dpEnd);
             this.pnlPlUsers.Controls.Add(this.dpStart);
@@ -141,27 +145,29 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.Red;
             this.btnClear.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(569, 234);
+            this.btnClear.Location = new System.Drawing.Point(595, 234);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(156, 53);
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Red;
             this.btnSearch.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(392, 234);
+            this.btnSearch.Location = new System.Drawing.Point(433, 234);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(156, 53);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbDeliveryDate);
+            this.groupBox1.Controls.Add(this.rbEndDate);
             this.groupBox1.Controls.Add(this.rbStartDate);
             this.groupBox1.Location = new System.Drawing.Point(544, 63);
             this.groupBox1.Name = "groupBox1";
@@ -169,17 +175,17 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
-            // rbDeliveryDate
+            // rbEndDate
             // 
-            this.rbDeliveryDate.AutoSize = true;
-            this.rbDeliveryDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDeliveryDate.Location = new System.Drawing.Point(6, 75);
-            this.rbDeliveryDate.Name = "rbDeliveryDate";
-            this.rbDeliveryDate.Size = new System.Drawing.Size(161, 31);
-            this.rbDeliveryDate.TabIndex = 1;
-            this.rbDeliveryDate.TabStop = true;
-            this.rbDeliveryDate.Text = "Delivery Date";
-            this.rbDeliveryDate.UseVisualStyleBackColor = true;
+            this.rbEndDate.AutoSize = true;
+            this.rbEndDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEndDate.Location = new System.Drawing.Point(6, 75);
+            this.rbEndDate.Name = "rbEndDate";
+            this.rbEndDate.Size = new System.Drawing.Size(118, 31);
+            this.rbEndDate.TabIndex = 1;
+            this.rbEndDate.TabStop = true;
+            this.rbEndDate.Text = "End Date";
+            this.rbEndDate.UseVisualStyleBackColor = true;
             // 
             // rbStartDate
             // 
@@ -441,6 +447,7 @@
             // 
             // dgvPermissionList
             // 
+            this.dgvPermissionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPermissionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPermissionList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPermissionList.Location = new System.Drawing.Point(0, 395);
@@ -449,6 +456,25 @@
             this.dgvPermissionList.RowTemplate.Height = 24;
             this.dgvPermissionList.Size = new System.Drawing.Size(1406, 326);
             this.dgvPermissionList.TabIndex = 10;
+            // 
+            // lblState
+            // 
+            this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.lblState.Location = new System.Drawing.Point(26, 237);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(58, 27);
+            this.lblState.TabIndex = 22;
+            this.lblState.Text = "State";
+            // 
+            // cmbState
+            // 
+            this.cmbState.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Location = new System.Drawing.Point(171, 229);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(251, 35);
+            this.cmbState.TabIndex = 3;
             // 
             // FrmPermissionList
             // 
@@ -463,6 +489,7 @@
             this.Name = "FrmPermissionList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPermissionList";
+            this.Load += new System.EventHandler(this.FrmPermissionList_Load);
             this.pnlPermission.ResumeLayout(false);
             this.pnlPermission.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();
@@ -505,7 +532,7 @@
         private System.Windows.Forms.TextBox txtDayAmount;
         private System.Windows.Forms.Label lblDayAmount;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbDeliveryDate;
+        private System.Windows.Forms.RadioButton rbEndDate;
         private System.Windows.Forms.RadioButton rbStartDate;
         private System.Windows.Forms.DateTimePicker dpEnd;
         private System.Windows.Forms.DateTimePicker dpStart;
@@ -516,5 +543,7 @@
         private System.Windows.Forms.Label lblUserNo;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.Label lblState;
     }
 }
