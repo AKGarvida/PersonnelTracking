@@ -78,8 +78,8 @@ namespace PersonalTracking
             dgvEmployeeList.Columns[11].Visible = false;
             dgvEmployeeList.Columns[12].Visible = false;
             dgvEmployeeList.Columns[13].Visible = false;
-            combofull = false;
 
+            combofull = false;
             cmbDepartment.DataSource = dto.Departments;
             cmbDepartment.DisplayMember = "Department Name";
             cmbDepartment.ValueMember = "ID";

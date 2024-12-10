@@ -26,7 +26,9 @@ namespace DAL.DTO
 
         public int SalaryYear { get; set; }
 
-        public string MonthID { get; set; }
+        public string MonthName { get; set; }
+
+        public int MonthID { get; set; }
 
         public int SalaryAmount { get; set; }
 
