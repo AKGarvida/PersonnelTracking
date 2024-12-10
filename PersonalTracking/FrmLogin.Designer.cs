@@ -73,6 +73,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
             this.txtPassword.Location = new System.Drawing.Point(188, 172);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(251, 34);
             this.txtPassword.TabIndex = 1;
             // 

@@ -108,6 +108,7 @@
             this.dpEnd.Name = "dpEnd";
             this.dpEnd.Size = new System.Drawing.Size(342, 34);
             this.dpEnd.TabIndex = 2;
+            this.dpEnd.ValueChanged += new System.EventHandler(this.dpEnd_ValueChanged);
             // 
             // dpStart
             // 
@@ -116,6 +117,7 @@
             this.dpStart.Name = "dpStart";
             this.dpStart.Size = new System.Drawing.Size(342, 34);
             this.dpStart.TabIndex = 1;
+            this.dpStart.ValueChanged += new System.EventHandler(this.dpStart_ValueChanged);
             // 
             // lblEnd
             // 
@@ -185,6 +187,7 @@
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmPermission
             // 
@@ -207,6 +210,7 @@
             this.Name = "FrmPermission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPermission";
+            this.Load += new System.EventHandler(this.FrmPermission_Load);
             this.pnlPermission.ResumeLayout(false);
             this.pnlPermission.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctExit)).EndInit();

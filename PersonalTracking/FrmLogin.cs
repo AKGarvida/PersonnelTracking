@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace PersonalTracking
 {
@@ -38,21 +40,41 @@ namespace PersonalTracking
             }
         }
 
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmMain frm = new FrmMain();
-            this.Hide();
-            frm.ShowDialog();
-            //this.Visible = true;
 
-            if (this.Visible == true)
-            {
-                frm.Close();
-            }
+            if (txtUserNo.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+                MessageBox.Show("Please fill the user number and password");
             else
             {
-                Application.Exit();
+                List<EMPLOYEE> employeelist = EmployeeBLL.GetEmployees(Convert.ToInt32(txtUserNo.Text), txtPassword.Text);
+
+                if (employeelist.Count == 0)
+                    MessageBox.Show("Please control your information");
+                
+                else
+                {
+                    EMPLOYEE employee = new EMPLOYEE();
+                    employee = employeelist.First();
+                    UserStatic.EmployeeID = employee.ID;
+                    UserStatic.UserNo = employee.UserNo;
+                    UserStatic.isAdmin = employee.isAdmin;
+
+                    FrmMain frm = new FrmMain();
+                    this.Hide();
+                    frm.ShowDialog();
+
+                    if (this.Visible == true)
+                        frm.Close();
+
+                    else
+                        Application.Exit();
+                }
             }
+
+
+            
             
         }
     }

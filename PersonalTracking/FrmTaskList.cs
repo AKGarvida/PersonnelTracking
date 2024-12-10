@@ -86,7 +86,9 @@ namespace PersonalTracking
             dgvTaskList.Columns[12].Visible = false;
             dgvTaskList.Columns[13].Visible = false;
             dgvTaskList.Columns[14].Visible = false;
-            
+
+            MessageBox.Show(UserStatic.EmployeeID.ToString() + " " + 
+                UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString());    
         }
 
         private void btnNew_Click(object sender, EventArgs e)

@@ -25,6 +25,12 @@ namespace BLL
             return dto;
         }
 
+        public static List<EMPLOYEE> GetEmployees(int v, string text)
+        {
+            return EmployeeDAO.GetEmployees(v, text);
+
+        }
+
         public static bool isUnique(int v)
         {
             List<EMPLOYEE> list = EmployeeDAO.GetUsers(v);
